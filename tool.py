@@ -1,8 +1,6 @@
-import requests
-import zipfile
-import os
-import sys
 import fileinput
+import zipfile
+import requests
 algo = input("1.POS 2.POW\n")
 if algo == '1':
     print("Selected POS")
@@ -42,4 +40,3 @@ if algo == '2':
     for line in fileinput.input(fileToSearch):
         tempFile.write(line.replace(texts, texts1))
     tempFile.close()
-
