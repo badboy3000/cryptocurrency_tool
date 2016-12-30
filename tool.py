@@ -11,7 +11,25 @@ if algo == '1':
         code.write(r.content)
     with zipfile.ZipFile("pos.zip", "r") as zip_ref:
         zip_ref.extractall("pos")
-    name = input("Name of your coin? ")
+    textToSearch = "Litecoin"
+    textToSearch1 = "litecoin"
+    textToSearch2 = "LITECOIN"
+    texts = "LTC"
+    textToReplace = input("Name of your coin? Like Litecoin or Bitcoin (Uppercase) ")
+    textToReplace1 = input("Name of your coin in lowercase ")
+    textToReplace3 = input("Name of your coin with CAPS LOCK ")
+    texts1 = input("Name of your coin like TLC, BTC ")
+    fileToSearch = "pow/litecoin-master-0.10/README.md"
+    tempFile = open(fileToSearch, 'r+')
+    for line in fileinput.input(fileToSearch):
+        tempFile.write(line.replace(textToSearch, textToReplace))
+    for line in fileinput.input(fileToSearch):
+        tempFile.write(line.replace(textToSearch1, textToReplace1))
+    for line in fileinput.input(fileToSearch):
+        tempFile.write(line.replace(textToSearch2, textToReplace3))
+    for line in fileinput.input(fileToSearch):
+        tempFile.write(line.replace(texts, texts1))
+    tempFile.close()
 if algo == '2':
     print("Selected POW")
     print("Requests version: ", requests.__version__)
