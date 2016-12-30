@@ -11,10 +11,10 @@ if algo == '1':
         code.write(r.content)
     with zipfile.ZipFile("pos.zip", "r") as zip_ref:
         zip_ref.extractall("pos")
-    textToSearch = "Litecoin"
-    textToSearch1 = "litecoin"
-    textToSearch2 = "LITECOIN"
-    texts = "LTC"
+    textToSearch = "Blackcoin"
+    textToSearch1 = "blackcoin"
+    textToSearch2 = "BLACKCOIN"
+    texts = "BLK"
     textToReplace = input("Name of your coin? Like Litecoin or Bitcoin (Uppercase) ")
     textToReplace1 = input("Name of your coin in lowercase ")
     textToReplace3 = input("Name of your coin with CAPS LOCK ")
