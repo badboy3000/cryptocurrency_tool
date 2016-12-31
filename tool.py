@@ -23,12 +23,9 @@ if algo == '1':
     tempFile = open(fileToSearch, 'r+')
     for line in fileinput.input(fileToSearch):
         tempFile.write(line.replace(textToSearch, textToReplace))
-    for line in fileinput.input(fileToSearch):
-        tempFile.write(line.replace(textToSearch1, textToReplace1))
-    for line in fileinput.input(fileToSearch):
-        tempFile.write(line.replace(textToSearch2, textToReplace3))
-    for line in fileinput.input(fileToSearch):
         tempFile.write(line.replace(texts, texts1))
+        tempFile.write(line.replace(textToSearch2, textToReplace3))
+        tempFile.write(line.replace(textToSearch1, textToReplace1))
     tempFile.close()
 if algo == '2':
     print("Selected POW")
@@ -36,9 +33,9 @@ if algo == '2':
     url = "https://github.com/litecoin-project/litecoin/archive/master-0.10.zip"
     r = requests.get(url)
     with open("pow.zip", "wb") as code:
-        code.write(r.content)
+        code.write(r.content) #Downloading sources
     with zipfile.ZipFile("pow.zip", "r") as zip_ref:
-        zip_ref.extractall("pow")
+        zip_ref.extractall("pow") #Unzip sources into 'pow' folder
     textToSearch = "Litecoin"
     textToSearch1 = "litecoin"
     textToSearch2 = "LITECOIN"
@@ -49,12 +46,9 @@ if algo == '2':
     texts1 = input("Name of your coin like TLC, BTC ")
     fileToSearch = "pow/litecoin-master-0.10/README.md"
     tempFile = open(fileToSearch, 'r+')
-    for line in fileinput.input(fileToSearch):
+    for line in fileinput.input(fileToSearch): #ACHTUNG!!! DONT WORK!! LOOP!
         tempFile.write(line.replace(textToSearch, textToReplace))
-    for line in fileinput.input(fileToSearch):
-            tempFile.write(line.replace(textToSearch1, textToReplace1))
-    for line in fileinput.input(fileToSearch):
-        tempFile.write(line.replace(textToSearch2, textToReplace3))
-    for line in fileinput.input(fileToSearch):
         tempFile.write(line.replace(texts, texts1))
+        tempFile.write(line.replace(textToSearch2, textToReplace3))
+        tempFile.write(line.replace(textToSearch1, textToReplace1))
     tempFile.close()
