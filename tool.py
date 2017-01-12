@@ -19,7 +19,7 @@ if algo == '1':
     textToReplace1 = input("Name of your coin in lowercase ")
     textToReplace3 = input("Name of your coin with CAPS LOCK ")
     texts1 = input("Name of your coin like TLC, BTC ")
-    fileToSearch = "pow/litecoin-master-0.10/README.md"
+    fileToSearch = "pos/blackcoin-master/README.md"
     tempFile = open(fileToSearch, 'r+')
     for line in fileinput.input(fileToSearch):
         tempFile.write(line.replace(textToSearch, textToReplace))
@@ -30,7 +30,7 @@ if algo == '1':
 if algo == '2':
     print("Selected POW")
     print("Requests version: ", requests.__version__)
-    url = "https://github.com/litecoin-project/litecoin/archive/master-0.10.zip"
+    url = "https://github.com/litecoin-project/litecoin/archive/v0.13.2.1.zip"
     r = requests.get(url)
     with open("pow.zip", "wb") as code:
         code.write(r.content) #Downloading sources
@@ -44,11 +44,16 @@ if algo == '2':
     textToReplace1 = input("Name of your coin in lowercase ")
     textToReplace3 = input("Name of your coin with CAPS LOCK ")
     texts1 = input("Name of your coin like TLC, BTC ")
-    fileToSearch = "pow/litecoin-master-0.10/README.md"
+    fileToSearch = "pow/litecoin-0.13.2.1/README.md"
     tempFile = open(fileToSearch, 'r+')
     for line in fileinput.input(fileToSearch): #ACHTUNG!!! DONT WORK!! LOOP!
         tempFile.write(line.replace(textToSearch, textToReplace))
+    tempFile.close()
+    tempFile = open(fileToSearch, 'r+')
+    for line in fileinput.input(fileToSearch):
         tempFile.write(line.replace(texts, texts1))
+    tempFile.close()
+    tempFile = open(fileToSearch, 'r+')
+    for line in fileinput.input(fileToSearch):
         tempFile.write(line.replace(textToSearch2, textToReplace3))
-        tempFile.write(line.replace(textToSearch1, textToReplace1))
     tempFile.close()
