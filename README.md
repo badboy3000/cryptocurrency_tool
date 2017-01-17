@@ -10,6 +10,11 @@ POW: Litecoin 0.10<br/>
 • Litecoin deps.</br>
 
 **Configuring system:**</br>
-• Clone repo or download zip</br>
+• Clone repo or download zip</br></br>
 <img src="https://github.com/grumpydevelop/cryptocurrency_tool/blob/master/img/1.png"></br>
-• Go to ```cryptocurrency_tool``` folder</br>
+• Go to ```cryptocurrency_tool``` folder</br></br>
+<img src="https://github.com/grumpydevelop/cryptocurrency_tool/blob/master/img/2.png"></br>
+• Do this:</br>
+$ chmod +x configure.sh</br>
+$ ./configure.sh </br></br>
+<img src="https://github.com/grumpydevelop/cryptocurrency_tool/blob/master/img/3.png"></br>
