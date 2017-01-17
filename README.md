@@ -11,4 +11,5 @@ POW: Litecoin 0.10<br/>
 
 **Configuring system:**</br>
 • Clone repo or download zip</br>
+<img src="https://github.com/grumpydevelop/cryptocurrency_tool/blob/master/img/1.png"></img>
 • Go to ```cryptocurrency_tool``` folder</br>
